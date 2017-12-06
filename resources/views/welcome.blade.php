@@ -40,6 +40,9 @@
         <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
         <link rel="apple-touch-icon-precomposed" href="pink/apple-touch-icon-57x.png" />
         <!-- [favicon] end -->
+
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
         
         <!-- CSSs -->
         <link rel="stylesheet" type="text/css" media="all" href="pink/css/reset.css" /> <!-- RESET STYLESHEET -->
@@ -55,6 +58,9 @@
         <link rel="stylesheet" id="buttons" href="pink/css/buttons.css" type="text/css" media="all" />
         <link rel="stylesheet" id="cache-custom-css" href="pink/css/cache-custom.css" type="text/css" media="all" />
         <link rel="stylesheet" id="custom-css" href="pink/css/custom.css" type="text/css" media="all" />
+
+
+        <link rel="stylesheet" " href="footer/style.css" type="text/css" media="all" />
         
         <!-- FONTs -->
         <link rel="stylesheet" id="google-fonts-css" href="http://fonts.googleapis.com/css?family=Oswald%7CDroid+Sans%7CPlayfair+Display%7COpen+Sans+Condensed%3A300%7CRokkitt%7CShadows+Into+Light%7CAbel%7CDamion%7CMontez&amp;ver=3.4.2" type="text/css" media="all" />
@@ -90,193 +96,11 @@
             <div id="wrapper" class="group">
                 
                 <!-- START HEADER -->
-                <div id="header" class="group">
-                    
-                    <div class="group inner">
-                        
-                        <!-- START LOGO -->
-                        <div id="logo" class="group">
-                            <a href="index.html" title="Pink Rio"><img src="pink/images/logo.png" title="Pink Rio" alt="Pink Rio" /></a>
-                        </div>
-                        <!-- END LOGO -->
-                        
-                        <div id="sidebar-header" class="group">
-                            <div class="widget-first widget yit_text_quote">
-                                <blockquote class="text-quote-quote">&#8220;The caterpillar does all the work but the butterfly gets all the publicity.&#8221;</blockquote>
-                                <cite class="text-quote-author">George Carlin</cite>
-                            </div>
-                        </div>
-                        <div class="clearer"></div>
-                        
-                        <hr />
-                        
-                        <!-- START MAIN NAVIGATION -->
-                        <div class="menu classic">
-                            <ul id="nav" class="menu">
-                                
-                                <li>
-                                    <a href="index.html">HOME</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="home-ii.html">Home II</a></li>
-                                        <li><a href="home-iii.html">Home III</a></li>
-                                        <li><a href="home-iv.html">Home IV</a></li>
-                                        <li><a href="home-v.html">Home V</a></li>
-                                        <li><a href="home-vi.html">Home VI</a></li>
-                                        <li><a href="home-vii.html">Home VII</a></li>
-                                        <li><a href="home-viii.html">Home VIII</a></li>
-                                        <li><a href="home-ix.html">Home IX</a></li>
-                                        <li><a href="home-x.html">Home X</a></li>
-                                        <li><a href="landing-page.html">Landing page</a></li>
-                                    </ul>
-                                </li>
-                                
-                                <li>
-                                    <a href="#">SLIDERS</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="slider-layerslider.html">LayerSlider</a></li>
-                                        <li><a href="slider-flexslider.html">FlexSlider</a></li>
-                                        <li><a href="slider-elastic-slider.html">Elastic</a></li>
-                                        <li><a href="slider-thumbnails.html">Thumbnails</a></li>
-                                        <li><a href="slider-cycle.html">Cycle</a></li>
-                                        <li><a href="slider-static-header.html">Static header</a></li>
-                                    </ul>
-                                </li>
-                                
-                                <li>
-                                    <a href="#">CORPORATE</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="corporate-about.html">About</a></li>
-                                        <li><a href="landing-page.html">Landing page</a></li>
-                                        <li><a href="corporate-videogallery.html">Videogallery</a></li>
-                                        <li><a href="corporate-testimonials.html">Testimonials</a></li>
-                                        <li><a href="contact.html">Contact</a></li>
-                                    </ul>
-                                </li>
-                                
-                                <li>
-                                    <a href="#">PORTFOLIO</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="portfolio-filterable.html">Filterable</a></li>
-                                        <li><a href="portfolio-three-columns.html">Three columns</a></li>
-                                        <li><a href="project.html">Full description</a></li>
-                                        <li><a href="portfolio-big-image.html">Big Image</a></li>
-                                    </ul>
-                                </li>
-                                
-                                <li>
-                                    <a href="#">BLOG</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="blog-big-image.html">Big image</a></li>
-                                        <li><a href="blog-small-image.html">Small image</a></li>
-                                    </ul>
-                                </li>
-                                
-                                <li>
-                                    <a href="#">FEATURES</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="features-right-sidebar.html">Right sidebar</a></li>
-                                        <li><a href="features-left-sidebar.html">Left sidebar</a></li>
-                                        <li><a href="features-full-width.html">Full width</a></li>
-                                        <li><a href="error-404.html">404 error</a></li>
-                                    </ul>
-                                </li>
-                                
-                                <li>
-                                    <a href="#">SHORTCODES</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="shortcodes-typography.html">Typography</a></li>
-                                        <li><a href="shortcodes-icon-section.html">Icon section</a></li>
-                                        <li><a href="shortcodes-alert-box-buttons.html">Alert box &#038; Buttons</a></li>
-                                        <li><a href="shortcodes-tables-box-prices.html">Tables &#038; Box prices</a></li>
-                                        <li><a href="shortcodes-media-widgets.html">Media &#038; Widgets</a></li>
-                                        <li><a href="shortcodes-mix-various.html">Mix &#038; Various</a></li>
-                                    </ul>
-                                </li>
-                                
-                                <li class="remove-under-1024">
-                                    <a href="http://themeforest.net/item/pink-rio-responsive-multipurpose-theme/3091259">PURCHASE PINK RIO</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="http://www.yourinspirationweb.com/tf/support/forum/viewforum.php?f=27">Support forum</a></li>
-                                    </ul>
-                                </li>
-                                
-                            </ul>
-                        </div>
-                        <!-- END MAIN NAVIGATION -->
-                        <div id="header-shadow"></div>
-                        <div id="menu-shadow"></div>
-                    </div>
-                    
-                </div>
+                    @include('layouts.header')
                 <!-- END HEADER -->
                 
                 <!-- BEGIN #slider -->
-                <div id="slider-elastic" class="slider elastic ei-slider" style="width: 100%; height: 400px;">
-                    <div class="ei-slider-loading">Loading</div>
-                    <ul class="ei-slider-large">
-                        <li class="first slide-1 slide align-">
-                            <a href="http://www.google.it" target="_blank"><img src="pink/images/slider-elastic/sci11.jpg" alt="sci11" title="sci11" /></a>
-                            <div class="ei-title">
-                                <h2><a href="http://www.google.it" target="_blank">love the sport</a></h2>
-                                <h3>...feel the music</h3>
-                            </div>
-                        </li>
-                        <li class="slide-2 slide align-">
-                            <img width="1280" height="500" src="pink/images/slider-elastic/dolce11.jpg" alt="dolce11" title="dolce11" />
-                            <div class="ei-title">
-                                <h2>So sweet, so cute</h2>
-                                <h3>enjoy this theme</h3>
-                            </div>
-                        </li>
-                        <li class="slide-3 slide align-">
-                            <img src="pink/images/slider-elastic/love1.jpg" alt="love1" title="love1" />
-                            <div class="ei-title">
-                                <h2>This premium theme</h2>
-                                <h3>a great solution</h3>
-                            </div>
-                        </li>
-                        <li class="slide-4 slide align-">
-                            <img width="1280" height="500" src="pink/images/slider-elastic/red-passion1.jpg" alt="red-passion1" title="red-passion1" />
-                            <div class="ei-title">
-                                <h2>Love the red fruit</h2>
-                                <h3>... a red passion</h3>
-                            </div>
-                        </li>
-                        <li class="last slide-5 slide align-">
-                            <img src="pink/images/slider-elastic/xx21.jpg" alt="xx21" title="xx21" />
-                            <div class="ei-title">
-                                <h2>Enjoy your freedom...</h2>
-                                <h3>and love your life</h3>
-                            </div>
-                        </li>
-                    </ul>
-                    <!-- ei-slider-large -->
-                    <ul class="ei-slider-thumbs">
-                        <li class="ei-slider-element">Current</li>
-                        <li><a href="#">love the sport - </a><img src="pink/images/slider-elastic/sci11-150x59.jpg" alt=" - " /></li>
-                        <li><a href="#">So sweet, so cute - </a><img src="pink/images/slider-elastic/dolce11-150x59.jpg" alt=" - " /></li>
-                        <li><a href="#">This premium theme - </a><img src="pink/images/slider-elastic/love1-150x59.jpg" alt=" - " /></li>
-                        <li><a href="#">Love the red fruit - </a><img src="pink/images/slider-elastic/red-passion1-150x59.jpg" alt=" - " /></li>
-                        <li><a href="#">Enjoy your freedom... - </a><img src="pink/images/slider-elastic/xx21-150x59.jpg" alt=" - " /></li>
-                    </ul>
-                    <!-- ei-slider-thumbs -->    
-                    <div class="shadow"></div>
-                </div>
-                <!-- ei-slider -->    
-                <!-- END #slider -->
-                <script type="text/javascript">
-                    jQuery(document).ready(function($){
-                        $('#slider-elastic.elastic').eislideshow({
-                            easing      : 'easeOutExpo',
-                            titleeasing : 'easeOutExpo',
-                            titlespeed  : 1200,
-                            autoplay    : true,
-                            slideshow_interval : 3000,
-                            speed       : 800,
-                            animation   : 'sides'
-                        });
-                    });
-                </script>
+                @include('layouts.slider')
                 
                 <!-- START PRIMARY -->
                 <div id="primary" class="sidebar-right">
@@ -338,41 +162,7 @@
                         </div>
                         <!-- END CONTENT -->
                         <!-- START SIDEBAR -->
-                        <div class="sidebar group">
-                            
-                            <div class="widget-first widget popular-posts">
-                                <h3>Latest news</h3>
-                                <div class="recent-post group">
-                                    <div class="hentry-post group">
-                                        <div class="thumb-img"><img src="pink/images/articles/001-55x55.png" alt="001" title="001" /></div>
-                                        <div class="text">
-                                            <a href="article.html" title="Section shortcodes &amp; sticky posts!" class="title">Section shortcodes &amp; sticky posts!</a>
-                                            <p class="post-date">September 24, 2012</p>
-                                        </div>
-                                    </div>
-                                    <div class="hentry-post group">
-                                        <div class="thumb-img"><img src="pink/images/articles/003-55x55.jpg" alt="003" title="003" /></div>
-                                        <div class="text">
-                                            <a href="article.html" title="Nice &amp; Clean. The best for your blog!" class="title">Nice &amp; Clean. The best for your blog!</a>
-                                            <p class="post-date">September 24, 2012</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="widget widget-icon-text group">
-                                <img class="icon-img" src="pink/images/icons/heart.png" alt="" />        
-                                <h3>12,895 sales</h3>
-                                <p>of our themes on ThemeForest</p>
-                            </div>
-                            
-                            <div class="widget-last widget widget-icon-text group">
-                                <img class="icon-img" src="pink/images/icons/calc.png" alt="" />     
-                                <h3>Call for a quote</h3>
-                                <p>Contact us for a free quote now!</p>
-                            </div>
-                            
-                        </div>
+                        @include('layouts.sidebar')
                         <!-- END SIDEBAR -->
                         <!-- START EXTRA CONTENT -->
                         <!-- END EXTRA CONTENT -->
@@ -381,22 +171,7 @@
                 <!-- END PRIMARY -->
                                 
                 <!-- START COPYRIGHT -->
-                <div id="copyright">
-                    <div class="inner group">
-                        <div class="left">
-                            <a href="http://yithemes.com/?ddownload=2046&ap_id=pinkrio-html"><strong>Download the free version for Wordpress</strong></a>
-                        </div>
-                        <div class="right">
-                            <a href="#" class="socials-small facebook-small" title="Facebook">facebook</a>
-                            <a href="#" class="socials-small rss-small" title="Rss">rss</a>
-                            <a href="#" class="socials-small twitter-small" title="Twitter">twitter</a>
-                            <a href="#" class="socials-small flickr-small" title="Flickr">flickr</a>
-                            <a href="#" class="socials-small skype-small" title="Skype">skype</a>
-                            <a href="#" class="socials-small google-small" title="Google">google</a>
-                            <a href="#" class="socials-small pinterest-small" title="Pinterest">pinterest</a>
-                        </div>
-                    </div>
-                </div>
+                @include('layouts.contact')
                 <!-- END COPYRIGHT -->
             </div>
             <!-- END WRAPPER -->

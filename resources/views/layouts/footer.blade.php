@@ -9,22 +9,42 @@
    <div class="cnt-block">
    <div class="contact-wrap"><div class="leadform-show-form large lf-form-default leadform-lite">
                <form action="" method="post" class="lead-form-front" id="form_1" enctype="multipart/form-data">
-                <h1>Contact Us</h1><div class="name-type lf-field"><label>Name</label>
-        <span><input id="1" type="text" name="Name" class="lf-form-name" value="" required placeholder="Name" />
-        </span></div><div class="text-type lf-field"><label>Email</label>
-        <span><input id="2" type="email" class="lf-form-text " name="Email" required value="" placeholder="Email" />
-        </span></div><div class="text-type lf-field"><label>Contact No</label>
-        <span><input id="3" type="number" class="lf-form-text " name="Contact No" required value="" placeholder="Contact number" />
-        </span></div><div class="textarea-type lf-field"><label>Message</label>
-            <span><textarea id="4" name="Message" class="lf-form-textarea" value="Message" placeholder="Message" required></textarea>
-            </span></div><div class="lf-form-panel"><div class="submit-type lf-field"><label><input id="0" class="lf-form-submit" type="submit" name="submit" value="Submit"/>
-                </label></div></div>
+
+
+
+                @include('layouts.contactus')
+                {{-- <h1>Contact Us</h1>
+                <input type="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    
+
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    
+
+      
+
+        <div class="form-group basic-textarea rounded-corners shadow-textarea">
+    
+    <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="3" placeholder="Write something here..."></textarea>
+</div>
+
+            <div class="lf-form-panel">
+
+              <div class="submit-type lf-field"><label><input id="0" class="lf-form-submit" type="submit" name="submit" value="Submit"/>
+                </label>
+
+              </div>
+
+              </div> --}}
+
+
                 <div class="captcha-field-area" id="captcha-field-area"></div>
                 <input type="hidden" id="hidden_field" name="hidden_field" value="1"/>
                 <input type="hidden" id="this_form_captcha_status" value="disable"/>
                 <div class="leadform-show-loading front-loading leadform-show-message-form-1"></div>
                 <div class="lf-loading"><img src="https://themehunk.com/wp-themes/featuredlite/wp-content/plugins/lead-form-builder/images/load.gif" style="display: none;" id="loading_image"></div>
-                </form></div></div>
+                </form>
+
+            </div></div>
    <div class="detail-wrap">
    <div class="cnt-detail">
      <ul>
