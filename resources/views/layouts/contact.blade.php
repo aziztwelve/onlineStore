@@ -1,6 +1,8 @@
 <head>
     {{-- <link rel="stylesheet" href="css/app.css"> --}}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <style>
 .red{
@@ -22,39 +24,65 @@ display: block;
 margin-right: 200px;
 margin-top: 50px;
 }
+
+.btn-us{
+        display: inline-block;
+    background: #11d6d4;
+    border-radius: 100px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    text-align: center;
+    height: 42px;
+    line-height: 42px;
+    padding: 0 26px;
+    border: none;
+    border: 0;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0s;
+    transition: all 0.3s;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
 </style>
 <div style="background-color: rgba(0, 0, 0, 0.01);" class="container">
     
     <div style="float: right;margin-right: 50px;">
-        {{-- <div class="cnt-detail">
-            <ul>
-                <li class="tel">
-                    <div class="cnt-icon"><a href="tel:+91 987654321"><i class="fa fa-mobile" aria-hidden="true"></i></a></div>
-                    <div class="cnt-info"><a href="+91 987654321">+91 987654321</a></div>
-                </li>
-                <li class="address">
-                    <div class="cnt-icon">
-                        <i class="fa fa-home" aria-hidden="true"></i>
-                    </div>
-                    <div class="cnt-info"><p>92 Bayport Ave.
-                    South Richmond Hill, NY 11413</p></div>
-                </li>
-                <li class="email-ad">
-                    <div class="cnt-icon"><a href="mailto:info@themehunk.com"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></div>
-                    <div class="cnt-info"><a href="mailto:info@themehunk.com">info@themehunk.com</a></div>
-                </li>
-            </ul>
-        </div> --}}
+        
         <div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m20!1m8!1m3!1d1998.9425234021676!2d30.3610854!3d59.9330959!3m2!1i1024!2i768!4f13.1!4m9!3e2!4m3!3m2!1d59.9347049!2d30.3602527!4m3!3m2!1d59.933045699999994!2d30.3601335!5e0!3m2!1sru!2sru!4v1512522151409" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe></div>
-
     </div>
     <div class="col-md-5">
-        <div class="form">
-            <form style="margin-top: 10px;" {{-- role="form" --}}>
+        <div class="form" style="margin-top: 30px;>
+            {{-- <form style="margin-top: 10px;"> --}}
                 <div class="row d-flex justify-content-center">
-                    <h3 class="white-text mb-0 py-5 font-bold">Contact Us</h3>
+                    <h3 class="white-text mb-0 py-5 font-bold" style="margin-left: 100px;" ><span>ОБРАТНАЯ СВЯЗЬ</span></h3>
                 </div>
-                <div class="form-group ">
+                @if(Session::has('success'))
+                <div class="alert alert-success">
+                    {{ Session::get('success') }}
+                </div>
+                @endif
+                
+                {!! Form::open(['route'=>'contactus.store']) !!}
+                <div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
+                    {!! Form::label('Имя*') !!}
+                    {!! Form::text('name', old('name'), ['class'=>'form-control', 'placeholder'=>'Введите Имя']) !!}
+                    <span class="text-danger">{{ $errors->first('name') }}</span>
+                </div>
+                <div class="form-group {{ $errors->has('email') ? 'has-error' : '' }}">
+                    {!! Form::label('Email*') !!}
+                    {!! Form::text('email', old('email'), ['class'=>'form-control', 'placeholder'=>'Введите Email']) !!}
+                    <span class="text-danger">{{ $errors->first('email') }}</span>
+                </div>
+                <div class="form-group {{ $errors->has('message') ? 'has-error' : '' }}">
+                    {!! Form::label('Сообщение*') !!}
+                    {!! Form::textarea('message', old('message'), ['class'=>'form-control', 'rows'=>'7', 'placeholder'=>'Введите Сообщение']) !!}
+                    <span class="text-danger">{{ $errors->first('message') }}</span>
+                </div>
+                {{-- {!! Form::close() !!} --}}
+                {{-- <div class="form-group ">
                     <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
                 </div>
                 <div class="form-group">
@@ -63,11 +91,15 @@ margin-top: 50px;
                 
                 <div class="form-group">
                     <textarea class="form-control" type="textarea" id="message" placeholder="Message" maxlength="140" rows="7"></textarea>
-                   
+                    
+                </div> --}}
+                <div class="form-group" style="margin-left: 150px;">
+                    <button style="background-color: #11d6d4;" class="btn-us">Contact US!</button>
                 </div>
                 
-                <button style="margin-left: 150px;" type="button" id="submit" name="submit" class="btn btn-primary ">Submit Form</button>
-            </form>
+                {{-- <button style="margin-left: 150px;" type="button" id="submit" name="submit" class="btn btn-primary ">Submit Form</button> --}}
+            {{-- </form> --}}
+            {!! Form::close() !!}
         </div>
     </div>
 </div>

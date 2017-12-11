@@ -65,7 +65,7 @@
         <div class="header peach-gradient">
 
             <div class="row d-flex justify-content-center">
-                <h3 class="white-text mb-0 py-5 font-bold">Contact Us</h3>
+                <h3 class="white-text mb-0 py-5 font-bold">Contact U</h3>
             </div>
 
         </div>
