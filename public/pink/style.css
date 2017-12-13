@@ -124,7 +124,7 @@ html { min-height:101% }
 
 .responsive.isMobile .wrapper { overflow: hidden; }
 
-.sidebar { width: 28%; }
+.sidebar { width: 32%; }
 .content { width: 68%; }
 
 .sidebar-left .sidebar, .sidebar-right .content { float: left; }

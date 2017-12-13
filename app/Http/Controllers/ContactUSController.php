@@ -39,7 +39,7 @@ class ContactUSController extends Controller
 
 
 
-       Mail::send('email',
+       Mail::send('email.contact',
        array(
            'name' => $request->get('name'),
            'email' => $request->get('email'),

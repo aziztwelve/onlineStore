@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html>
 
 
@@ -24,4 +24,4 @@
 
 @include('layouts.footer')
 </body>
-</html>
+</html> --}}

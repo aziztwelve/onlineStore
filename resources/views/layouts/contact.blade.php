@@ -81,24 +81,12 @@ margin-top: 50px;
                     {!! Form::textarea('message', old('message'), ['class'=>'form-control', 'rows'=>'7', 'placeholder'=>'Введите Сообщение']) !!}
                     <span class="text-danger">{{ $errors->first('message') }}</span>
                 </div>
-                {{-- {!! Form::close() !!} --}}
-                {{-- <div class="form-group ">
-                    <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control" id="email" name="email" placeholder="Email" required>
-                </div>
                 
-                <div class="form-group">
-                    <textarea class="form-control" type="textarea" id="message" placeholder="Message" maxlength="140" rows="7"></textarea>
-                    
-                </div> --}}
                 <div class="form-group" style="margin-left: 150px;">
                     <button style="background-color: #11d6d4;" class="btn-us">Contact US!</button>
                 </div>
                 
-                {{-- <button style="margin-left: 150px;" type="button" id="submit" name="submit" class="btn btn-primary ">Submit Form</button> --}}
-            {{-- </form> --}}
+                
             {!! Form::close() !!}
         </div>
     </div>

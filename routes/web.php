@@ -27,8 +27,8 @@ Route::get('/one', function () {
 // Route::get('/one', function () {
 //     return view('one');
 // });
-Route::get('one', 'AvoContactController@contactpage')->name('one');
-Route::post('one', 'AvoContactController@store')->name('one_store');
+// Route::get('one', 'AvoContactController@contactpage')->name('one');
+// Route::post('one', 'AvoContactController@store')->name('one_store');
 
 
 
