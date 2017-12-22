@@ -1,5 +1,10 @@
 <?php
 
+
+Route::get('one', function() {
+    return view('one.phonebook');
+});
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,24 +16,27 @@
 |
 */
 
-Route::get('/', function () {
+
+
+Route::get('/', [
+	'uses'=>'ProductController@getContent',
+	'as'=>'content'
+]);
+
+Route::get('/add-to-cart/{id}', [
+	'uses'=>'ProductController@getAddToCart',
+	'as'=>'addToCart'
+]);
+
+Route::get('/shopping-cart', [
+	'uses'=>'ProductController@getCart',
+	'as'=>'shoppingCart'
+]);
+
+
+Route::get('home', function () {
     return view('welcome');
 });
-
-
-Route::get('/home', function () {
-    return view('master');
-});
-Route::get('/one', function () {
-    return view('one');
-});
-
-
-// Route::get('/one', function () {
-//     return view('one');
-// });
-// Route::get('one', 'AvoContactController@contactpage')->name('one');
-// Route::post('one', 'AvoContactController@store')->name('one_store');
 
 
 

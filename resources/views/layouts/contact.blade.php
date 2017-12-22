@@ -4,49 +4,6 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
-<style>
-.red{
-color:red;
-}
-.form-area
-{
-background-color: #FAFAFA;
-padding: 10px 40px 60px;
-margin: 10px 0px 60px;
-border: 1px solid GREY;
-}
-.map iframe {
-height: 400px;
-width: 105%;
-border: 0;
-/*pointer-events: none;*/
-display: block;
-margin-right: 200px;
-margin-top: 50px;
-}
-
-.btn-us{
-        display: inline-block;
-    background: #11d6d4;
-    border-radius: 100px;
-    color: #fff;
-    font-family: 'Roboto', sans-serif;
-    font-size: 15px;
-    text-align: center;
-    height: 42px;
-    line-height: 42px;
-    padding: 0 26px;
-    border: none;
-    border: 0;
-    cursor: pointer;
-    position: relative;
-    transition: background-color 0s;
-    transition: all 0.3s;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-}
-</style>
 <div style="background-color: rgba(0, 0, 0, 0.01);" class="container">
     
     <div style="float: right;margin-right: 50px;">
