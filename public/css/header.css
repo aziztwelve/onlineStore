@@ -1,8 +1,8 @@
 .classcard {
   background: #fff;
   width: 265px;
-  margin-right: 3.5%;
-  margin-bottom: 3.5%;
+  margin-right: 40px;
+  margin-bottom: 40px;
   /*border-radius: 10px;*/
   float: left;
   text-align: center;
@@ -10,7 +10,6 @@
   /*padding: 0 0 27px;*/
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  /*height: 450px;*/
 }
 
 /*.classcard:hover{

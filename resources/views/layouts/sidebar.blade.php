@@ -1,7 +1,7 @@
 <div class="sidebar group">
                             
                             <div class="widget-first widget popular-posts">
-                                <h3>Latest news</h3>
+                                <h3>Компании</h3>
                                 <div class="recent-post group">
                                     <div class="hentry-post group">
                                         <div class="thumb-img"><img src="pink/images/articles/001-55x55.png" alt="001" title="001" /></div>

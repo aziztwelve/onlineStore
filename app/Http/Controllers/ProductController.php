@@ -15,6 +15,12 @@ class ProductController extends Controller
     	return view('content', ['products'=>$products]);
     }
 
+    public function show($id){
+        $product = Product::whereId($id)->firstOrFail();
+        return  view('show.product',    compact('product'));
+
+    }
+
 
 
 

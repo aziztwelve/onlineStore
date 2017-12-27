@@ -5,7 +5,6 @@
     
     <!START HEAD -->
     <head>
-        {{-- ===============boot3======================= --}}
         <link rel="stylesheet" href="{{ url('path/to/font-awesome/css/font-awesome.min.css') }} ">
         <link rel="stylesheet" type="text/css" href="{{ url('css/app.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ url('css/header.css') }}">
@@ -27,16 +26,13 @@
         
         
         <!-- CSSs -->
-        {{-- <link rel="stylesheet" type="text/css" media="all" href="pink/css/reset.css" /> <!- RESET STYLESHEET -> --}}
-        {{-- <link rel="stylesheet" type="text/css" media="all" href="pink/style.css" /> MAIN THEME STYLESHEET --}}
+      
         <link rel="stylesheet" id="max-width-1024-css" href="{{ url('pink/css/max-width-1024.css') }} " type="text/css" media="screen and (max-width: 1240px)" />
         <link rel="stylesheet" id="max-width-768-css" href="{{ url('pink/css/max-width-768.css') }} " type="text/css" media="screen and (max-width: 987px)" />
         <link rel="stylesheet" id="max-width-480-css" href="{{ url('pink/css/max-width-480.css') }} " type="text/css" media="screen and (max-width: 480px)" />
         <link rel="stylesheet" id="max-width-320-css" href="{{ url('pink/css/max-width-320.css') }} " type="text/css" media="screen and (max-width: 320px)" />
         
-        <!-- CSSs Plugin -->
-        {{-- <link rel="stylesheet" id="styles-minified-css" href="pink/css/style-minifield.css" type="text/css" media="all" /> --}}
-        
+    
         <!-- FONTs -->
         <link rel="stylesheet" id="google-fonts-css" href="http://fonts.googleapis.com/css?family=Oswald%7CDroid+Sans%7CPlayfair+Display%7COpen+Sans+Condensed%3A300%7CRokkitt%7CShadows+Into+Light%7CAbel%7CDamion%7CMontez&amp;ver=3.4.2" type="text/css" media="all" />
         <link rel='stylesheet' href='{{ url('pink/css/font-awesome.css') }}  ' type='text/css' media='all' />
@@ -61,37 +57,9 @@
     </head>
     <!-- END HEAD -->
     
-    {{-- @include('layouts.header') --}}
-    <!-- START BODY -->
-    <body >
-        {{-- @include('layouts.header') --}}
-        <!-- START BG SHADOW -->
-        {{-- <div class="bg-shadow"> --}}
-            {{--  --}}
-            <!-- START WRAPPER -->
-            {{-- <div id="wrapper" class="group"> --}}
-                
-                <!-- START HEADER -->
-                {{-- @include('layouts.header') --}}
-                <!-- END HEADER -->
-                
-                <!-- BEGIN #slider -->
-                {{-- @include('layouts.slider') --}}
-                
-                <!-- START PRIMARY -->
-                {{--       @yield('content')
-            </div>
-        </div>
-        <div>
-            @include('layouts.contact')
-        </div>
-        <div>
-            @include('layouts.footer')
-        </div> --}}
-        <!-- END BG SHADOW -->
+    
         @include('layouts.header')
         <hr>
-        @include('layouts.slider')
         @yield('content')
         @include('layouts.contact')
         @include('layouts.footer')

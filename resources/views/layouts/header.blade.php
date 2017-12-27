@@ -30,27 +30,7 @@
         </li>
         
     </ul>
-    {{-- <div class="container">
-        <div id="block-block-1" class="block block-block">
-            
-            <div class="content">
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="    float: left;">
-                    <span class="">Северо-западная компания «Аврора»</span>
-                </div><!- end columns ->
-                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12" style="float: right; ">
-                    <div class="callus" style="float: right;">
-                        <span class=""><i class="fa fa-phone"></i> +7 (812) 333-00-20</span>
-                        <span class=""><i class="fa fa-envelope"></i> <a href="mailto:info@td-aurora.ru">info@td-aurora.ru</a></span>
-                        <span class=""><i class="fa fa-user"></i>
-                            <a href="http://td-aurora.ru/user">Войти</a> / <a href="http://td-aurora.ru/user/register">Регистрация</a>
-                        </span>
-                        <span class=""><i class="fa fa-shopping-cart"></i> <a href="/cart"> Корзина</a></span>
-                        
-                    </div><!- end callus >
-                </div><!- end columns >  </div>
-                
-            </div>
-        </div> --}}
+    
         <div class="clearer"></div>
         
         <hr />
@@ -65,26 +45,26 @@
                 </li>
                 
                 <li>
-                    <a href="#">Каталог</a>
-                    <ul class="sub-menu">
+                    <a href="{{ route('brands') }}">Каталог</a>
+                    {{-- <ul class="sub-menu">
                         <li><a href="slider-layerslider.html">LayerSlider</a></li>
                         <li><a href="slider-flexslider.html">FlexSlider</a></li>
                         <li><a href="slider-elastic-slider.html">Elastic</a></li>
                         <li><a href="slider-thumbnails.html">Thumbnails</a></li>
                         <li><a href="slider-cycle.html">Cycle</a></li>
                         <li><a href="slider-static-header.html">Static header</a></li>
-                    </ul>
+                    </ul> --}}
                 </li>
                 
                 <li>
                     <a href="#">Сезонное предложение</a>
-                    <ul class="sub-menu">
+                    {{-- <ul class="sub-menu">
                         <li><a href="corporate-about.html">About</a></li>
                         <li><a href="landing-page.html">Landing page</a></li>
                         <li><a href="corporate-videogallery.html">Videogallery</a></li>
                         <li><a href="corporate-testimonials.html">Testimonials</a></li>
                         <li><a href="contact.html">Contact</a></li>
-                    </ul>
+                    </ul> --}}
                 </li>
                 
                 <li>

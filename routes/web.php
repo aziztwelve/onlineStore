@@ -23,6 +23,16 @@ Route::get('/', [
 	'as'=>'content'
 ]);
 
+Route::get('/product/{id}', [
+	'uses'=>'ProductController@show',
+	'as'=>'showProduct'
+]);
+
+Route::get('/brands', [
+	'uses'=>'BrandController@show',
+	'as'=>'brands'
+]);
+
 Route::get('/add-to-cart/{id}', [
 	'uses'=>'ProductController@getAddToCart',
 	'as'=>'addToCart'
