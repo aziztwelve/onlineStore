@@ -1,41 +1,79 @@
 @extends('master')
-{{-- @section('slider')
-
-    @parent
-@show --}}
 @section('content')
 
-{{-- <div id="primary"  style="margin-top: 30px;"> --}}
-    {{-- <div style="margin-left: 20%;"> --}}
-        
-        {{-- @include('layouts.sidebar') --}}
-    {{-- </div> --}}
-    <div class="inner group" style="float:left; width: 100%; margin-left: 30px;">
-        
-        {{-- @foreach($products->chunk(4) as $productChunk) --}}
-        <div class="row" style="margin-left: 30px;">
-            {{-- @foreach($productChunk as $product) --}}
-            <div class="card classcard">
-                <img style="z-index: 1;" class="card-img-top" src="{{ url('img/ferrero.jpg') }} " alt="Card image cap">
-                <div style="z-index: 2;" class="card-body">
-                    <a href="{{-- {!!    action('ProductController@show',    $product->id)  !!} --}}">
-                        <h6 style="max-height: 38px; min-height: 38px;" class="card-title main-text">fd{{-- {{ $product->title }} --}}</h6>
-                    </a>
-                </div>
-            </div>
-
-
-            <div class="card card-inverse">
-  <img class="card-img" src="{{ url('img/ferrero.jpg') }}" alt="Card image">
-  <div class="card-img-underlay">
-    <h4 class="card-title">Card title</h4>
+<div class="row" style="margin: 0 10px 0 100px; " >
     
-  </div>
-</div>
-            {{-- @endforeach --}}
+    <div class="card card-inverse" style="width: 200px; height: 130; border: 0; margin-right: 30px; margin-bottom: 30px;">
+        <img class="card-img" style=" max-height: 130px;" src="{{ url('img/ferrero.jpg') }}" alt="Card image">
+        <div class="card-img-underlay">
+            <h4 class="card-title" style="text-align: center; color: grey; ">Альвина</h4>
+            
         </div>
-        {{-- @endforeach --}}
-        
     </div>
-{{-- </div> --}}
+    <div class="card card-inverse" style="width: 200px; height: 130; border: 0; margin-right: 30px; margin-bottom: 30px;">
+        <img class="card-img" style=" max-height: 130px;" src="{{ url('img/777.png') }}" alt="Card image">
+        <div class="card-img-underlay">
+            <h4 class="card-title" style="text-align: center; color: grey">Альфа</h4>
+            
+        </div>
+    </div>
+    <div class="card card-inverse" style="width: 200px; height: 130; border: 0; margin-right: 30px; margin-bottom: 30px;">
+        <img class="card-img" style=" max-height: 130px;" src="{{ url('img/dentral.png') }}" alt="Card image">
+        <div class="card-img-underlay">
+            <h4 class="card-title" style="text-align: center; color: grey">БАФ</h4>
+            
+        </div>
+    </div>
+    <div class="card card-inverse" style="width: 200px; height: 130; border: 0; margin-right: 30px; margin-bottom: 30px;">
+        <img class="card-img" style=" max-height: 130px;" src="{{ url('img/doshirak.jpg') }}" alt="Card image">
+        <div class="card-img-underlay">
+            <h4 class="card-title" style="text-align: center; color: grey">Вижер</h4>
+            
+        </div>
+    </div>
+    <div class="card card-inverse" style="width: 200px; height: 130; border: 0; margin-right: 30px; margin-bottom: 30px;">
+        <img class="card-img" style=" max-height: 130px;" src="{{ url('img/roks.jpg') }}" alt="Card image">
+        <div class="card-img-underlay">
+            <h4 class="card-title" style="text-align: center; color: grey">Виконд</h4>
+            
+        </div>
+    </div>
+    <div class="card card-inverse" style="width: 200px; height: 130; border: 0; margin-right: 30px; margin-bottom: 30px;">
+        <img class="card-img" style=" max-height: 130px;" src="{{ url('img/storck.jpg') }}" alt="Card image">
+        <div class="card-img-underlay">
+            <h4 class="card-title" style="text-align: center; color: grey">Витьба</h4>
+            
+        </div>
+    </div>
+    <div class="card card-inverse" style="width: 200px; height: 130; border: 0; margin-right: 30px; margin-bottom: 30px;">
+        <img class="card-img" style=" max-height: 130px;" src="{{ url('img/suvenir.jpg') }}" alt="Card image">
+        <div class="card-img-underlay">
+            <h4 class="card-title" style="text-align: center; color: grey">Восточные сладости</h4>
+            
+        </div>
+    </div>
+    <div class="card card-inverse" style="width: 200px; height: 130; border: 0; margin-right: 30px; margin-bottom: 30px;">
+        <img class="card-img" style=" max-height: 130px;" src="{{ url('img/shturval.jpg') }}" alt="Card image">
+        <div class="card-img-underlay">
+            <h4 class="card-title" style="text-align: center; color: grey">Диабет</h4>
+            
+        </div>
+    </div>
+    <div class="card card-inverse" style="width: 200px; height: 130; border: 0; margin-right: 30px; margin-bottom: 30px;">
+        <img class="card-img" style=" max-height: 130px;" src="{{ url('img/p1.jpg') }}" alt="Card image">
+        <div class="card-img-underlay">
+            <h4 class="card-title" style="text-align: center; color: grey;">Берег</h4>
+            
+        </div>
+    </div>
+    <div class="card card-inverse" style="width: 200px; height: 130; border: 0; margin-right: 30px; margin-bottom: 30px;">
+        <img class="card-img" style=" max-height: 130px;" src="{{ url('img/ferrero.jpg') }}" alt="Card image">
+        <div class="card-img-underlay">
+            <h4 class="card-title" style="text-align: center; color:  color: grey;">Вафли</h4>
+            
+        </div>
+    </div>
+    
+</div>
+
 @endsection

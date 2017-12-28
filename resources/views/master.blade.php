@@ -11,6 +11,15 @@
         <link rel="stylesheet" type="text/css" href="{{ url('pink/style.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ url('pink/css/reset.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ url('pink/css/style-minifield.css') }}">
+        <!-- <link rel="stylesheet" href="{{ url('card/css/style.css') }} "> -->
+
+
+        
+
+
+
+
+
         <script type="text/javascript" scr="{{ url('js/app.js') }}"></script>
         <link rel="stylesheet" href="{{ url('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css') }} " integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
         <script
@@ -36,8 +45,23 @@
         <!-- FONTs -->
         <link rel="stylesheet" id="google-fonts-css" href="http://fonts.googleapis.com/css?family=Oswald%7CDroid+Sans%7CPlayfair+Display%7COpen+Sans+Condensed%3A300%7CRokkitt%7CShadows+Into+Light%7CAbel%7CDamion%7CMontez&amp;ver=3.4.2" type="text/css" media="all" />
         <link rel='stylesheet' href='{{ url('pink/css/font-awesome.css') }}  ' type='text/css' media='all' />
+
+
+
+
+
+
+        
+  
+
+
+
+
+
         
         <!-- JAVASCRIPTs -->
+        <!-- // <script src="{{ url('card/js/index.js') }}"></script> -->
+
         <script type="text/javascript" scr="{{ url('js/app.js') }}"></script>
         <script type="text/javascript" src="{{ url('pink/js/jquery.js') }} "></script>
         <script type="text/javascript" src="{{ url('pink/js/comment-reply.js') }} "></script>

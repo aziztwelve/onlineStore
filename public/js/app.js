@@ -11918,13 +11918,35 @@ var Myfooter = __webpack_require__(41);
 var routes = [{ path: '/one/home', component: Home }, { path: '/one/about', component: About }];
 
 var router = new __WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]({
-  routes: routes // сокращение от `routes: routes`
+    routes: routes // сокращение от `routes: routes`
 });
 
 var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
-  el: '#app',
-  router: router,
-  components: { Myheader: Myheader, Myfooter: Myfooter }
+    el: '#app',
+    router: router,
+    components: { Myheader: Myheader, Myfooter: Myfooter }
+});
+
+$(function () {
+    $('.material-card > .mc-btn-action').click(function () {
+        var card = $(this).parent('.material-card');
+        var icon = $(this).children('i');
+        icon.addClass('fa-spin-fast');
+
+        if (card.hasClass('mc-active')) {
+            card.removeClass('mc-active');
+
+            window.setTimeout(function () {
+                icon.removeClass('fa-arrow-left').removeClass('fa-spin-fast').addClass('fa-bars');
+            }, 800);
+        } else {
+            card.addClass('mc-active');
+
+            window.setTimeout(function () {
+                icon.removeClass('fa-bars').removeClass('fa-spin-fast').addClass('fa-arrow-left');
+            }, 800);
+        }
+    });
 });
 
 /***/ }),
