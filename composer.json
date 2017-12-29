@@ -11,7 +11,10 @@
         "laravel/framework": "5.5.*",
         "laravel/tinker": "~1.0",
         "laravelcollective/html": "5.5.x-dev",
-        "unisharp/laravel-filemanager": "~1.8"
+        "unisharp/laravel-filemanager": "~1.8",
+
+        "apigen/apigen": "dev-master",
+        "roave/better-reflection": "dev-master#c87d856"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.1",

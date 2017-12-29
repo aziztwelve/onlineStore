@@ -29,8 +29,13 @@ Route::get('/product/{id}', [
 ]);
 
 Route::get('/brands', [
-	'uses'=>'BrandController@show',
+	'uses'=>'BrandController@getBrands',
 	'as'=>'brands'
+]);
+
+Route::get('/brands/{id}', [
+	'uses'=>'BrandController@show',
+	'as'=>'showBrand'
 ]);
 
 Route::get('/add-to-cart/{id}', [

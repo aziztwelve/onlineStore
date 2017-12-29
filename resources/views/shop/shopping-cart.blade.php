@@ -1,4 +1,4 @@
-@extends('welcome')
+@extends('master')
 @section('content')
 @if(Session::has('cart'))
 <div class="row">

@@ -6,6 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Brand extends Model
 {
+
+	protected $fillable = ['imagePath', 'name', ];
+
+
+
     public function products()
     {
         return $this->hasMany('App\Product');

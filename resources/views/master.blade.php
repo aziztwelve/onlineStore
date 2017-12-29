@@ -14,6 +14,7 @@
         <!-- <link rel="stylesheet" href="{{ url('card/css/style.css') }} "> -->
 
 
+
         
 
 
@@ -60,7 +61,6 @@
 
         
         <!-- JAVASCRIPTs -->
-        <!-- // <script src="{{ url('card/js/index.js') }}"></script> -->
 
         <script type="text/javascript" scr="{{ url('js/app.js') }}"></script>
         <script type="text/javascript" src="{{ url('pink/js/jquery.js') }} "></script>
