@@ -38,6 +38,13 @@ Route::get('/brands/{id}', [
 	'as'=>'showBrand'
 ]);
 
+
+
+
+
+
+// ===================================cart==============================
+
 Route::get('/add-to-cart/{id}', [
 	'uses'=>'ProductController@getAddToCart',
 	'as'=>'addToCart'
@@ -47,6 +54,14 @@ Route::get('/shopping-cart', [
 	'uses'=>'ProductController@getCart',
 	'as'=>'shoppingCart'
 ]);
+
+
+
+
+
+
+
+
 
 
 Route::get('home', function () {

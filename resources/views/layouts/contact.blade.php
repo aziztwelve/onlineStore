@@ -40,7 +40,7 @@
                 </div>
                 
                 <div class="form-group" style="margin-left: 150px;">
-                    <button style="background-color: #11d6d4;" class="btn-us">Contact US!</button>
+                    <button style="background-color: #11d6d4;" class="btn-us">Обратная связь</button>
                 </div>
                 
                 

@@ -32,6 +32,7 @@ class ProductController extends Controller
 
     	$request->session()->put('cart', $cart);
     	return redirect()->back();
+        // return Response::json($request);
     	
     }
 
@@ -41,7 +42,9 @@ class ProductController extends Controller
     	}
     	$oldCart = Session::get('cart');
     	$cart = new Cart($oldCart);
-    	return view('shop.shopping-cart', ['products'=>$cart->items, 'totalPrice'=>$cart->totalPrice]);
+        $product = Product::all();
+    	return view('shop.shopping-cart', ['products'=>$cart->items, 'totalPrice'=>$cart->totalPrice, 
+            'product'=>$product]);
     }
 }
 	

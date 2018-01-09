@@ -1,35 +1,47 @@
 require('./bootstrap');
 
-window.Vue = require('vue');
+// window.Vue = require('vue');
 
 
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+// import Vue from 'vue'
+// import VueRouter from 'vue-router'
 
-Vue.use(VueRouter)
+// Vue.use(VueRouter)
 
 
+// Vue.component('example', require('./components/Example.vue'));
 
 let Myheader = require('./components/Myheader.vue');
 let Myfooter = require('./components/Myfooter.vue');
+let AddCard = require('./components/Myfooter.vue');
 
 
-const routes = [
-  { path: '/one/home', component: Home },
-  { path: '/one/about', component: About }
-];
+// const routes = [
+//   { path: '/one/home', component: Home },
+//   { path: '/one/about', component: About }
+// ];
+
+ 
+// const router = new VueRouter({
+//   routes // сокращение от `routes: routes`
+// });
 
 
-const router = new VueRouter({
-  routes // сокращение от `routes: routes`
-});
+
+// const app = new Vue({
+//     el: '#app',
+//     router,
+//     components:{Myheader,Myfooter}
+// });
 
 
+// Vue.component('example', require('./components/Example.vue'));
+Vue.component('chat-message', require('./components/ChatMessage.vue'));
+// Vue.component('add-card', require('./components/AddCard.vue'));
 
 const app = new Vue({
     el: '#app',
-    router,
-    components:{Myheader,Myfooter}
+    components:{Myheader,Myfooter,AddCard}
 });
 
 
@@ -40,34 +52,32 @@ const app = new Vue({
 
 
 
+// $(function() {
+//         $('.material-card > .mc-btn-action').click(function () {
+//             var card = $(this).parent('.material-card');
+//             var icon = $(this).children('i');
+//             icon.addClass('fa-spin-fast');
 
+//             if (card.hasClass('mc-active')) {
+//                 card.removeClass('mc-active');
 
-$(function() {
-        $('.material-card > .mc-btn-action').click(function () {
-            var card = $(this).parent('.material-card');
-            var icon = $(this).children('i');
-            icon.addClass('fa-spin-fast');
+//                 window.setTimeout(function() {
+//                     icon
+//                         .removeClass('fa-arrow-left')
+//                         .removeClass('fa-spin-fast')
+//                         .addClass('fa-bars');
 
-            if (card.hasClass('mc-active')) {
-                card.removeClass('mc-active');
+//                 }, 800);
+//             } else {
+//                 card.addClass('mc-active');
 
-                window.setTimeout(function() {
-                    icon
-                        .removeClass('fa-arrow-left')
-                        .removeClass('fa-spin-fast')
-                        .addClass('fa-bars');
+//                 window.setTimeout(function() {
+//                     icon
+//                         .removeClass('fa-bars')
+//                         .removeClass('fa-spin-fast')
+//                         .addClass('fa-arrow-left');
 
-                }, 800);
-            } else {
-                card.addClass('mc-active');
-
-                window.setTimeout(function() {
-                    icon
-                        .removeClass('fa-bars')
-                        .removeClass('fa-spin-fast')
-                        .addClass('fa-arrow-left');
-
-                }, 800);
-            }
-        });
-    });
+//                 }, 800);
+//             }
+//         });
+//     });

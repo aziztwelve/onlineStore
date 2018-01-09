@@ -12,20 +12,42 @@
             @foreach($productChunk as $product)
             <div class="card classcard">
                 <img style="z-index: 1;" class="card-img-top" src="{{ $product->imagePath }}" alt="Card image cap">
-                <div style="z-index: 2;" class="card-body">
+                <div style="z-index: 2;" class="card-body" id="app">
                     <a href="{!!    action('ProductController@show',    $product->id)  !!}">
                         <h6 style="max-height: 38px; min-height: 38px;" class="card-title main-text">{{ $product->title }}</h6>
                     </a>
-                    <div class="buy-block">
-                        <h4 style="z-index: 1;"  class="card-sale">{{ $product->price }}$</h4>
-                        <a style="z-index: 2;" href=" {{ route('addToCart', ['id'=>$product->id]) }} " class="btn-buy">в корзину</a>
+                    <div class="buy-block" id="app">
+                        <h4 style="z-index: 1;"  class="card-sale">{{ $product->price }} <i class="fa fa-rub" aria-hidden="true"></i>
+</h4>
+
+                        <div class="product-icon-container">
+                        <a style="z-index: 2;" href=" {{ route('addToCart', ['id'=>$product->id]) }} " class="btn-buy">В КОРЗИНУ</a>
+
+                        </div>
+                    
+ 
+
+
+
+
+
+                        
+
+
+                    
+                        <script src="https://unpkg.com/vue@2.5.13/dist/vue.js"></script>
+                        <script src="https://unpkg.com/axios/dist/axios.min.js"></script> 
                     </div>
+                    
                 </div>
             </div>
             @endforeach
         </div>
         @endforeach
-        
     </div>
-{{-- </div> --}}
 @endsection
+
+
+
+
+
