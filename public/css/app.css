@@ -8350,6 +8350,21 @@ button.close {
   }
 }
 
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  overflow: auto;
+  /* добавить полосу прокрутки */
+  overflow-x: hidden;
+}
+
 .form-gradient .header {
   border-top-left-radius: .3rem;
   border-top-right-radius: .3rem;

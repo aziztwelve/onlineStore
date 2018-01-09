@@ -14,8 +14,19 @@
 // @import "~bulma/bulma";
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
+html, body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
 
+      }
 
+body {
+        overflow: auto; /* добавить полосу прокрутки */ 
+        overflow-x: hidden;
+      }
 
 
 

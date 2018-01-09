@@ -14,7 +14,7 @@
                 <img style="z-index: 1;" class="card-img-top" src="{{ $product->imagePath }}" alt="Card image cap">
                 <div style="z-index: 2;" class="card-body" id="app">
                     <a href="{!!    action('ProductController@show',    $product->id)  !!}">
-                        <h6 style="max-height: 38px; min-height: 38px;" class="card-title main-text">{{ $product->title }}</h6>
+                        <h6 style="max-height: 38px; min-height: 38px; grid-auto-rows:2" class="card-title main-text">{{ $product->title }}</h6>
                     </a>
                     <div class="buy-block" id="app">
                         <h4 style="z-index: 1;"  class="card-sale">{{ $product->price }} <i class="fa fa-rub" aria-hidden="true"></i>
