@@ -2,24 +2,31 @@
 @section('content')
 @if(Session::has('cart'))
 <div class="row"  >
-	<div style="margin-left: 70px; " class="col-sm-7 col-md-7 col-md-offset-3 col-sm-offset-3">
+	<div style="margin-left: 70px; " class="col-sm-8 col-md-8 col-md-offset-3 col-sm-offset-3">
 		<ul class="list-group">
 			@foreach($products as $product)
 			<li class="list-group-item" style="margin-bottom: 20px;">
 				@foreach($product as $item)
-				<img style="width: 200px; height: 100px;  " src="{{ $item['imagePath'] }}" alt="">
-				@endforeach
-				<span class="badge" style="margin-top: 40px;">{{ $product['qty'] }}</span>
-				<strong>{{ $product['item']['title'] }}</strong>
-				<span class="label label-success">{{ $product['price'] }} <i class="fa fa-rub" aria-hidden="true"></i>
-</span>
-				<div class="btn-group" style="z-index: 1;">
-					<button style="z-index: 2;" type="button" data-toggle="dropdown" class="btn btn-primary btn-xs dropdown-toggle">
-					Action <span class=""></span>
+				<div style="float: left;">
+					
+					<img style="width: 200px; height: 100px;  " src="{{ $item['imagePath'] }}" alt="">
+					@endforeach
+					<strong>{{ $product['item']['title'] }}</strong>
+					<span class="label label-success" style=" margin-left: 20px;">{{ $product['price'] }} <i class="fa fa-rub" aria-hidden="true"></i>
+					</span>
+					<span class="badge" style="margin-left:20px; ">
+						Кол-во:
+						{{ $product['qty'] }}
+					</span>
+				</div>
+				<div class="btn-group" style="z-index: 1; float: right; margin-left: 20px; margin-top: 30px;  ">
+					<button style="z-index: 2; color: black;" type="button" data-toggle="dropdown" class="btn btn-secondary dropdown-toggle">
+					Изменить <span class=""></span>
 					</button>
 					<ul class="dropdown-menu">
-						<li><a href="#">Reduce by 1</a></li>
-						<li><a href="#">Reduce all</a></li>
+						<li><a href="#">Увеличить на 1</a></li>
+						<li><a href="#">Уменьшить до 1</a></li>
+						<li><a href="#">Удалить</a></li>
 					</ul>
 				</div>
 			</li>

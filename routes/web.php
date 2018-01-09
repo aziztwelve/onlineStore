@@ -50,7 +50,7 @@ Route::get('/add-to-cart/{id}', [
 	'as'=>'addToCart'
 ]);
 
-Route::get('/shopping-cart', [
+Route::get('/cart', [
 	'uses'=>'ProductController@getCart',
 	'as'=>'shoppingCart'
 ]);
