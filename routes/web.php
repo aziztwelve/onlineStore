@@ -50,6 +50,21 @@ Route::get('/add-to-cart/{id}', [
 	'as'=>'addToCart'
 ]);
 
+Route::get('/reduce/{id}', [
+	'uses'=>'ProductController@getReduceByOne',
+	'as'=>'reduceByOne'
+]);
+
+Route::get('/boost/{id}', [
+	'uses'=>'ProductController@getBoostByOne',
+	'as'=>'boostByOne'
+]);
+
+Route::get('/remove/{id}', [
+	'uses'=>'ProductController@getRemoveItem',
+	'as'=>'removeItem'
+]);
+
 Route::get('/cart', [
 	'uses'=>'ProductController@getCart',
 	'as'=>'shoppingCart'

@@ -2,7 +2,7 @@
 @section('content')
 @if(Session::has('cart'))
 <div class="row"  >
-	<div style="margin-left: 70px; " class="col-sm-8 col-md-8 col-md-offset-3 col-sm-offset-3">
+	<div style="margin-left: 70px; " class="col-sm-8.5 col-md-8.5 col-md-offset-3 col-sm-offset-3">
 		<ul class="list-group">
 			@foreach($products as $product)
 			<li class="list-group-item" style="margin-bottom: 20px;">
@@ -24,9 +24,9 @@
 					Изменить <span class=""></span>
 					</button>
 					<ul class="dropdown-menu">
-						<li><a href="#">Увеличить на 1</a></li>
-						<li><a href="#">Уменьшить до 1</a></li>
-						<li><a href="#">Удалить</a></li>
+						<li><a href="{{ route('boostByOne', ['id' => $product['item']['id']]) }}">Увеличить на 1</a></li>
+						<li><a href="{{ route('reduceByOne', ['id' => $product['item']['id']]) }}">Уменьшить на 1</a></li>
+						<li><a href="{{ route('removeItem', ['id' => $product['item']['id']]) }}">Удалить</a></li>
 					</ul>
 				</div>
 			</li>
