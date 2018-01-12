@@ -40,7 +40,16 @@ Route::get('/brands/{id}', [
 
 
 
+//order
+Route::get('/order', [
+	'uses'=>'OrderController@showOrder',
+	'as'=>'order'
+]);
 
+Route::post('/order', [
+	'uses'=>'OrderController@postOrder',
+	'as'=>'order'
+]);
 
 
 // ===================================cart==============================

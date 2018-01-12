@@ -43,7 +43,9 @@
 <hr>
 <div class="row">
 	<div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
+		<a href="{{ route('order') }}">
 		<button type="button" class="btn btn-success">ОФОРМИТЬ ЗАКАЗ</button>
+		</a>
 	</div>
 </div>
 @else

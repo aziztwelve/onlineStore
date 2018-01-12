@@ -1,6 +1,15 @@
 @extends('welcome')
 @section('content')
     <div class="inner group" style="float:left; width: 100%; margin-left: 30px;">
+        @if (Session::has('success')) 
+        <div class="row">
+            <div class="col-sm-6 col-md-4 col-md-offset-4 col-sm-offset-3">
+                <div id="charge-message" class="alert alert-success">
+                    {{ Session::get('success') }}
+                </div>
+            </div>
+        </div>
+        @endif
         <div class="index-tabs">
             <a href="">Хит</a>
             <a href="">Новинки</a>

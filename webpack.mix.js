@@ -18,3 +18,4 @@ mix.sass('resources/assets/sass/main.scss', 'public/css/header.css');
 mix.sass('resources/assets/sass/pink.scss', 'public/css/pink.css');
 
 // mix.browserSync('http://127.0.0.1:8000');
+mix.js('resources/assets/js/pink.js', 'public/pink/js/pink.js');
