@@ -88,6 +88,33 @@
     
         @include('layouts.header')
         <hr>
+         @if (Session::has('success')) 
+        <div class="row">
+            <div class="col-sm-6 col-md-4 col-md-offset-4 col-sm-offset-3">
+                <div id="charge-message" class="alert alert-success">
+                    {{ Session::get('success') }}
+                </div>
+            </div>
+        </div>
+        @endif
+
+
+
+@if(count($errors)>0)
+<div class="row">
+    <div class="col-sm-6 col-md-4 col-md-offset-4 col-sm-offset-3">
+        <div class="alert alert-danger">
+            {{-- <ul> --}}
+                @foreach($errors->all() as $error)
+                <li>
+                    {{$error}}
+                </li>
+                @endforeach
+            {{-- </ul> --}}
+        </div>
+    </div>
+</div>
+@endif
         @yield('content')
         @include('layouts.contact')
         @include('layouts.footer')

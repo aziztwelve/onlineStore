@@ -16,11 +16,11 @@
                 <div class="row d-flex justify-content-center">
                     <h3 class="white-text mb-0 py-5 font-bold" style="margin-left: 100px;" ><span>ОБРАТНАЯ СВЯЗЬ</span></h3>
                 </div>
-                @if(Session::has('success'))
+                {{-- @if(Session::has('success'))
                 <div class="alert alert-success">
                     {{ Session::get('success') }}
                 </div>
-                @endif
+                @endif --}}
                 
                 {!! Form::open(['route'=>'contactus.store']) !!}
                 <div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">

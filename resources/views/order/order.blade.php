@@ -56,7 +56,7 @@
 <div class="container frame"  id="delivery_block" style="display: none;">
   <div class=" unvisible" {{-- id="delivery_block" style="display: block;" --}}>
     <form action="{{ route('order') }}" method="post" name="cake_order_delivery">
-      <div id="cake_options_hidden1">
+      {{-- <div id="cake_options_hidden1">
         <input value="Торт Канадский с кленовым сиропом" name="items[1333][title]" type="hidden">
         <input value="120 часа(ов)" name="items[1333][storage_life]" type="hidden">
         <input value="750.00 г" name="items[1333][weight]" type="hidden">
@@ -78,7 +78,7 @@
         <input value="1895.00" name="cost" type="hidden">
         <input value="1" name="merch_id" type="hidden">
         <input name="type" value="delivery" type="hidden">
-      </div>
+      </div> --}}
       <h2 style="text-align: center;">Доставка</h2>
       <table class="table-border">
         <tbody>
@@ -134,7 +134,8 @@
         <tr>
           <td colspan="2" align="center">
             <p>Всего к оплате: 2194<i class="fa fa-rub" aria-hidden="true"></i></p>
-            <input name="secret" value="real" type="hidden">
+            {{-- <input name="secret" value="real" type="hidden"> --}}
+            {{ csrf_field() }}
             <p><br><input value="Заказать" id="total1" type="submit"></p>
           </td>
         </tr>
@@ -153,7 +154,7 @@
 <div class="container frame" id="self_block" style="display: none;">
   <div class=" unvisible " {{-- id="self_block" style="display: block;" --}}>
     <form action="{{ route('order') }}" method="post" name="cake_order_self">
-      <div id="cake_options_hidden2">
+      {{-- <div id="cake_options_hidden2">
         
         <input value="Торт Канадский с кленовым сиропом" name="items[1333][title]" type="hidden">
         <input value="120 часа(ов)" name="items[1333][storage_life]" type="hidden">
@@ -176,13 +177,13 @@
         <input value="1895.00" name="cost" type="hidden">
         <input value="1" name="merch_id" type="hidden">
         <input name="type" value="self" type="hidden">
-      </div>
+      </div> --}}
       <h2 style="text-align: center;">Самовывоз</h2>
       <table class="table-border">
         <tbody>
           <tr>
             <td>Контактный номер телефона&nbsp;<span class="required_notice">*</span></td>
-            <td><input name="telephone" required="required" type="text"></td>
+            <td><input class="{{ $errors->has('name') ? 'has-error' : '' }}" name="telephone" required="required" type="text"></td>
           </tr>
           <tr>
             <td>Как вас зовут?</td>

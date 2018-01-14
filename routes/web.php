@@ -93,6 +93,70 @@ Route::get('home', function () {
 });
 
 
+Route::get('home12', function () {
+    return view('welcome');
+});
+
+
 
 Route::get('contact-us', 'ContactUSController@contactUS');
 Route::post('contact-us', ['as'=>'contactus.store','uses'=>'ContactUSController@contactUSPost']);
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+
+
+
+
+
+
+
+
+
+
+
+// ================================Admin=================================
+
+Route::get('Adlogin', function() {
+	    return view('admin.auth.admin_login');
+	})->name('admin_login');
+
+// admin/service
+Route::group(['prefix'=>'admin', 'middleware'=>'myadmin'], function(){
+
+	//admin
+	Route::get('/', function(){
+
+		return view('admin.layouts.app');
+
+	});
+
+	Route::get('orders',[
+	'uses'=>'Admin\OrdersController@getOrders',
+	'as'=>'admin_orders'
+	]);
+
+
+	
+
+	Route::group(['prefix'=>'product'], function(){
+
+	Route::get('add',[
+	'uses'=>'Admin\Product\AddController@getAdd',
+	'as'=>'product_get_add'
+	]);
+
+	Route::post('add',[
+	'uses'=>'Admin\Product\AddController@postAdd',
+	'as'=>'product_post_add'
+	]);
+
+
+	});
+
+
+});
+
+
+
