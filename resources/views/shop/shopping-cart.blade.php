@@ -5,11 +5,12 @@
 	<div style="margin-left: 70px; " class="col-sm-8.5 col-md-8.5 col-md-offset-3 col-sm-offset-3">
 		<ul class="list-group">
 			@foreach($products as $product)
+			
 			<li class="list-group-item" style="margin-bottom: 20px;">
 				@foreach($product as $item)
 				<div style="float: left;">
 					
-					<img style="width: 200px; height: 100px;  " src="{{ $item['imagePath'] }}" alt="">
+					<img style="width: 200px; height: 100px;  " src="{{ URL::to('/images') }}/{{ $item['imagePath'] }}" alt="">
 					@endforeach
 					<strong>{{ $product['item']['title'] }}</strong>
 					<span class="label label-success" style=" margin-left: 20px;">{{ $product['price'] }} <i class="fa fa-rub" aria-hidden="true"></i>

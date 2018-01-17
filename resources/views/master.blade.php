@@ -115,7 +115,9 @@
     </div>
 </div>
 @endif
+
         @yield('content')
+        
         @include('layouts.contact')
         @include('layouts.footer')
         

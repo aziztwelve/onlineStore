@@ -11,7 +11,9 @@ class ProductController extends Controller
 {
     public function getContent(){
 
-    	$products = Product::all();
+    	// $products = Product::all();
+        $products = Product::with('brand')->orderBy('id','asc')->where('id', '>=', 90)->limit(30)->get();
+        // dd($products);
     	return view('content', ['products'=>$products]);
     }
 
@@ -81,6 +83,54 @@ class ProductController extends Controller
         $product = Product::all();
     	return view('shop.shopping-cart', ['products'=>$cart->items, 'totalPrice'=>$cart->totalPrice, 
             'product'=>$product]);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    // ============================Hit=============================
+    public function getHit()
+    {
+        $products = Product::with('brand')->orderBy('id','asc')->limit(30)->get();
+        // dd($products);
+
+        // return view('content_hit')->with($products);
+        return view('content_hit', ['products'=>$products]);
+
+    }
+
+
+    // ============================Novelty=============================
+    public function getNovelty()
+    {
+        $products = Product::with('brand')->orderBy('id','asc')->where('id', '>=', 30)->limit(30)->get();
+        // dd($products);
+
+        // return view('content_hit')->with($products);
+        return view('content_novelty', ['products'=>$products]);
+
+    }
+
+
+
+
+    // ============================Hit=============================
+    public function getSale()
+    {
+        $products = Product::with('brand')->orderBy('id','asc')->where('id', '>=', 60)->limit(30)->get();
+        // dd($products);
+
+        // return view('content_hit')->with($products);
+        return view('content_sale', ['products'=>$products]);
+
     }
 }
 	

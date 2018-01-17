@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "06d46359e903adcfb211c64b17473942",
+    "content-hash": "ad37b6ba388362f64f98806a4e9fb377",
     "packages": [
         {
             "name": "apigen/apigen",
@@ -5969,8 +5969,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "laravelcollective/html": 20,
         "apigen/apigen": 20,
+        "laravelcollective/html": 20,
         "roave/better-reflection": 20
     },
     "prefer-stable": false,

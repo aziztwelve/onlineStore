@@ -11,9 +11,9 @@ require('./bootstrap');
 
 // Vue.component('example', require('./components/Example.vue'));
 
-let Myheader = require('./components/Myheader.vue');
-let Myfooter = require('./components/Myfooter.vue');
-let AddCard = require('./components/Myfooter.vue');
+// let Myheader = require('./components/Myheader.vue');
+// let Myfooter = require('./components/Myfooter.vue');
+// let AddCard = require('./components/Myfooter.vue');
 
 
 // const routes = [

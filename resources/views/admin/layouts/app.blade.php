@@ -15,6 +15,9 @@
 
     {{-- <script src="{{ asset('js/choosen.js') }}"></script> --}}
 
+    {{-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"> --}}
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css" />
+
     
 
       
@@ -40,9 +43,34 @@
                     <a style="margin-left:20px;" class="navbar-brand" href="{{ route('product_get_add') }}">
                         Добавить товар
                     </a> 
+
+                    <a style="margin-left:20px;" class="navbar-brand" href="{{ route('brand_get_add') }}">
+                        Добавить бренд
+                    </a> 
+
                     <a style="margin-left:20px;" class="navbar-brand" href="{{ route('admin_orders') }}">
                         Заказы
                     </a>
+
+                    <a style="margin-left:20px;" class="navbar-brand" href="{{ route('content') }}">
+                        Главная
+                    </a>
+
+                    
+
+                    <div class="dropdown" style="float: right; margin-top: 5px;">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Добавить
+                        <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a href="{{ route('content_hit_admin') }}">Хит</a></li>
+                            <li><a href="{{ route('content_novelty_admin') }}">Новинки</a></li>
+                            <li><a href="{{ route('content_sale_admin') }}">Распродажи</a></li>
+                            {{-- <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li> --}}
+                        </ul>
+                    </div>
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
@@ -82,12 +110,21 @@
                 </div>
             </div>
         </nav>
+          
 
         @yield('content')
     </div>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
+    {{-- <script src="{{ asset('js/app.js') }}"></script> --}}
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
+
+    <script type="text/javascript">
+  $('.selectpicker').selectpicker();
+</script>
       
 
 </body>
