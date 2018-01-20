@@ -35,7 +35,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.2, user-scalable=yes" />
         
-        <title>Pink Rio | A strong, powerful and multiporpose WordPress Theme</title>
+        <title>Кусочек Счастья</title>
         
         
         

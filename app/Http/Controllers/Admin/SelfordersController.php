@@ -4,18 +4,19 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Order;
+
+use App\Selforder;
 use \Illuminate\Database\Query\Builder;
 
-class OrdersController extends Controller
+class SelfordersController extends Controller
 {
     public function getOrders()
     {
-    	$orders = Order::orderBy('id','desc')->get();
-    	$orders->transform(function($order, $key){
+    	$selforders = Selforder::orderBy('id','desc')->get();
+    	$selforders->transform(function($order, $key){
     		$order->cart = unserialize($order->cart);
     		return $order;
     	});
-    	return view('admin.orders.orders', ['orders'=>$orders]);
+    	return view('admin.orders.ordersel', ['selforders'=>$selforders]);
     }
 }

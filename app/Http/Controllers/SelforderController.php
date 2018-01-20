@@ -7,24 +7,10 @@ use Illuminate\Http\Request;
 use Session;
 use App\Cart;
 use App\Product;
-use App\Order;
+use App\Selforder;
 
-class OrderController extends Controller
+class SelforderController extends Controller
 {
-    public function showOrder()
-    {
-        if (!Session::has('cart')) {
-            return view('shop.shopping-cart');
-        }
-        
-        $oldCart = Session::get('cart');
-        $cart = new Cart($oldCart);
-        $product = Product::with('brand')->get();
-        return view('order.order', ['products'=>$cart->items, 'totalPrice'=>$cart->totalPrice, 
-            'productB'=>$product]);
-    }
-
-
     public function postOrder( Request $request)
     {
     	if (!Session::has('cart')) {
@@ -42,11 +28,11 @@ class OrderController extends Controller
     	$oldCart = Session::get('cart');
     	$cart = new Cart($oldCart);
 
-        $order = new Order();
+        $order = new Selforder();
         $order->cart = serialize($cart);
         $order->telephone = $request->input('telephone');
         $order->name = $request->input('name');
-        $order->address = serialize($request->input('address'));
+        // $order->address = serialize($request->input('address'));
         $order->date = $request->input('date');
         $order->datetime = $request->input('datetime');
         $order->comment = $request->input('comment');

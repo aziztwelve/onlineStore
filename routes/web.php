@@ -77,6 +77,11 @@ Route::post('/order', [
 	'as'=>'order'
 ]);
 
+Route::post('/order', [
+	'uses'=>'SelforderController@postOrder',
+	'as'=>'self_order'
+]);
+
 
 // ===================================cart==============================
 
@@ -170,9 +175,14 @@ Route::group(['prefix'=>'admin', 'middleware'=>'myadmin'], function(){
 
 	
 
-	Route::get('orders',[
+	Route::get('orderdel',[
 	'uses'=>'Admin\OrdersController@getOrders',
 	'as'=>'admin_orders'
+	]);
+
+	Route::get('ordersel',[
+	'uses'=>'Admin\SelfordersController@getOrders',
+	'as'=>'admin_selforders'
 	]);
 
 

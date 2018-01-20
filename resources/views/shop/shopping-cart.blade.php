@@ -8,11 +8,11 @@
 			
 			<li class="list-group-item" style="margin-bottom: 20px;">
 				@foreach($product as $item)
-				<div style="float: left;">
+				<div style="float: left;  min-width: 600px;">
 					
 					<img style="width: 200px; height: 100px;  " src="{{ URL::to('/images') }}/{{ $item['imagePath'] }}" alt="">
 					@endforeach
-					<strong>{{ $product['item']['title'] }}</strong>
+					<strong style="padding-left: 40px;: ">{{ $product['item']['title'] }}</strong>
 					<span class="label label-success" style=" margin-left: 20px;">{{ $product['price'] }} <i class="fa fa-rub" aria-hidden="true"></i>
 					</span>
 					<span class="badge" style="margin-left:20px; ">

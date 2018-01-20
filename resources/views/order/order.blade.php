@@ -56,29 +56,6 @@
 <div class="container frame"  id="delivery_block" style="display: none;">
   <div class=" unvisible" {{-- id="delivery_block" style="display: block;" --}}>
     <form action="{{ route('order') }}" method="post" name="cake_order_delivery">
-      {{-- <div id="cake_options_hidden1">
-        <input value="Торт Канадский с кленовым сиропом" name="items[1333][title]" type="hidden">
-        <input value="120 часа(ов)" name="items[1333][storage_life]" type="hidden">
-        <input value="750.00 г" name="items[1333][weight]" type="hidden">
-        <input value="309.00 Ккал" name="items[1333][power]" type="hidden">
-        <input value="485" name="items[1333][price]" type="hidden">
-        <input value="1" name="items[1333][quantity]" type="hidden">
-        <input value="Торт бисквитный «СМЕТАННИК»" name="items[2946][title]" type="hidden">
-        <input value="5 дня(ей)" name="items[2946][storage_life]" type="hidden">
-        <input value="1.15 кг" name="items[2946][weight]" type="hidden">
-        <input value="310.00 Ккал" name="items[2946][power]" type="hidden">
-        <input value="715" name="items[2946][price]" type="hidden">
-        <input value="1" name="items[2946][quantity]" type="hidden">
-        <input value="Торт «Безе с клюквой и шоколадом»" name="items[2947][title]" type="hidden">
-        <input value="5 дня(ей)" name="items[2947][storage_life]" type="hidden">
-        <input value="1.00 кг" name="items[2947][weight]" type="hidden">
-        <input value="340.00 Ккал" name="items[2947][power]" type="hidden">
-        <input value="695" name="items[2947][price]" type="hidden">
-        <input value="1" name="items[2947][quantity]" type="hidden">
-        <input value="1895.00" name="cost" type="hidden">
-        <input value="1" name="merch_id" type="hidden">
-        <input name="type" value="delivery" type="hidden">
-      </div> --}}
       <h2 style="text-align: center;">Доставка</h2>
       <table class="table-border">
         <tbody>
@@ -118,7 +95,9 @@
         <tr>
           <td style="padding: 9px 0;text-align: left; width: 300px; ">Желаемая дата и время <br>выполнения заказа</td>
           <td>
-            <input name="date" style="width: 194px" tabindex="0" value="11.01.2018" class="date"> в
+            {{-- <input name="date" style="width: 194px" tabindex="0" value="11.01.2018" class="date"> --}}
+            <input type="text" name="date" style="width: 194px" class="" value="01-01-2018"> 
+             в
             <input name="datetime" class="time" size="6" value="20:00" style="width: 45px;" type="text">
           </td>
         </tr>
@@ -133,7 +112,7 @@
 
         <tr>
           <td colspan="2" align="center">
-            <p>Всего к оплате: 2194<i class="fa fa-rub" aria-hidden="true"></i></p>
+            <p>Всего к оплате: {{ $totalPrice }}<i class="fa fa-rub" aria-hidden="true"></i></p>
             {{-- <input name="secret" value="real" type="hidden"> --}}
             {{ csrf_field() }}
             <p><br><input value="Заказать" id="total1" type="submit"></p>
@@ -153,31 +132,8 @@
 
 <div class="container frame" id="self_block" style="display: none;">
   <div class=" unvisible " {{-- id="self_block" style="display: block;" --}}>
-    <form action="{{ route('order') }}" method="post" name="cake_order_self">
-      {{-- <div id="cake_options_hidden2">
-        
-        <input value="Торт Канадский с кленовым сиропом" name="items[1333][title]" type="hidden">
-        <input value="120 часа(ов)" name="items[1333][storage_life]" type="hidden">
-        <input value="750.00 г" name="items[1333][weight]" type="hidden">
-        <input value="309.00 Ккал" name="items[1333][power]" type="hidden">
-        <input value="485" name="items[1333][price]" type="hidden">
-        <input value="1" name="items[1333][quantity]" type="hidden">
-        <input value="Торт бисквитный «СМЕТАННИК»" name="items[2946][title]" type="hidden">
-        <input value="5 дня(ей)" name="items[2946][storage_life]" type="hidden">
-        <input value="1.15 кг" name="items[2946][weight]" type="hidden">
-        <input value="310.00 Ккал" name="items[2946][power]" type="hidden">
-        <input value="715" name="items[2946][price]" type="hidden">
-        <input value="1" name="items[2946][quantity]" type="hidden">
-        <input value="Торт «Безе с клюквой и шоколадом»" name="items[2947][title]" type="hidden">
-        <input value="5 дня(ей)" name="items[2947][storage_life]" type="hidden">
-        <input value="1.00 кг" name="items[2947][weight]" type="hidden">
-        <input value="340.00 Ккал" name="items[2947][power]" type="hidden">
-        <input value="695" name="items[2947][price]" type="hidden">
-        <input value="1" name="items[2947][quantity]" type="hidden">
-        <input value="1895.00" name="cost" type="hidden">
-        <input value="1" name="merch_id" type="hidden">
-        <input name="type" value="self" type="hidden">
-      </div> --}}
+    <form action="{{ route('self_order') }}" method="post" name="cake_order_self">
+      
       <h2 style="text-align: center;">Самовывоз</h2>
       <table class="table-border">
         <tbody>
@@ -189,16 +145,19 @@
             <td>Как вас зовут?</td>
             <td><input name="name" type="text"></td>
           </tr>
+          
           <tr>
-            <td>Самовывоз из магазина&nbsp;<span class="required_notice">*</span></td>
-            <td>
-              <a href="/stores_google.php" class="dashed various" id="open_choose_win">Выбрать магазин</a>
-              <input name="store" value="" id="store_hidden" type="hidden">
-            </td>
-          </tr>
+            <td style="padding: 9px 0;text-align: left; width: 300px; ">Адрес получения товара</td>
+            <td style="color: bold;">СПб, ст. м. Площадь Мужества, просп. Непокорённых, 63, к. 5 (склад 5/5)
+          </td>
+        </tr>
           <tr>
             <td style="padding: 9px 0;text-align: left; width: 300px; ">Желаемая дата и время самовывоза</td>
-            <td><input name="date" style="width: 194px" tabindex="0" value="11.01.2018" class="date"> в
+            <td>
+              {{-- <input name="date" style="width: 194px" tabindex="0" value="01.01.2018" class="date"> в --}}
+            {{-- <input name="datetime" class="time" size="6" value="12:00" style="width: 45px;" type="text"> --}}
+            <input type="text" name="date" style="width: 194px" class="" value="01-01-2018"> 
+             в
             <input name="datetime" class="time" size="6" value="20:00" style="width: 45px;" type="text">
           </td>
         </tr>
@@ -211,7 +170,7 @@
         </tr>
         <tr>
           <td colspan="2" align="center">
-            <p>Всего к оплате: 1895.00&nbsp;<i class="fa fa-rub" aria-hidden="true"></i></p>
+            <p>Всего к оплате: {{ $totalPrice }}<i class="fa fa-rub" aria-hidden="true"></i></p>
             <input name="secret" value="real" type="hidden">
             {{ csrf_field() }}
             <p><br><input value="Заказать" id="total2" type="submit"></p>

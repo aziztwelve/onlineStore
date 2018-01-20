@@ -18,7 +18,8 @@
     {{-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"> --}}
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css" />
 
-    
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
 
       
 </head>
@@ -48,15 +49,29 @@
                         Добавить бренд
                     </a> 
 
-                    <a style="margin-left:20px;" class="navbar-brand" href="{{ route('admin_orders') }}">
-                        Заказы
-                    </a>
 
                     <a style="margin-left:20px;" class="navbar-brand" href="{{ route('content') }}">
                         Главная
                     </a>
 
+                   {{--  <a style="margin-left:20px;" class="navbar-brand" href="{{ route('admin_orders') }}">
+                        Заказы
+                    </a> --}}
                     
+
+                    <div class="dropdown" style="float: right; margin-top: 5px;">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Заказы
+                        <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a href="{{ route('admin_orders') }}">Доставка</a></li>
+                            <li><a href="{{ route('admin_selforders') }}">Самовывоз</a></li>
+                            {{-- <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li> --}}
+                        </ul>
+                    </div>
+
 
                     <div class="dropdown" style="float: right; margin-top: 5px;">
                         <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
