@@ -12,54 +12,72 @@ class ProductTableSeeder extends Seeder
     public function run()
     {
         $product = new \App\Product([
-        	'imagePath'=> 'img/p1.jpg',
-        	'title'=>'Краситель сухой Food Colours 045 Фиолетовый 8',
-        	'description'=>'Краситель сухой Food Colours 045 Фиолетовый 8',
+            'id'=>'44',
+        	'imagePath'=> 'p1.jpg',
+        	'title'=>'Шоколад',
+        	'description'=>'Шоколад',
+            'weight'=> '3 кг',
+            'pulldate'=>'3 дня',
             'price'=>10,
             'brand_id'=>1
         ]);
         $product->save();
 
         $product = new \App\Product([
-        	'imagePath'=> 'img/p2.jpg',
-        	'title'=>'Краситель сухой Food Colours 045 Фиолетовый 8',
-        	'description'=>'Краситель сухой Food Colours 045 Фиолетовый 8',
+            'id'=>'45',
+        	'imagePath'=> 'p2.jpg',
+        	'title'=>'пирог',
+        	'description'=>'пирог',
+            'weight'=> '3 кг',
+            'pulldate'=>'3 дня',
         	'price'=>12,
             'brand_id'=>2
         ]);
         $product->save();
 
         $product = new \App\Product([
-        	'imagePath'=> 'img/p3.jpg',
-        	'title'=>'Краситель сухой Food Colours 045 Фиолетовый 8',
-        	'description'=>'Краситель сухой Food Colours 045 Фиолетовый 8',
+            'id'=>'46',
+        	'imagePath'=> 'p3.jpg',
+        	'title'=>'Медовик',
+        	'description'=>'Медовик',
+            'weight'=> '3 кг',
+            'pulldate'=>'3 дня',
         	'price'=>15,
             'brand_id'=>4
         ]);
         $product->save();
 
         $product = new \App\Product([
-        	'imagePath'=> 'img/p4.jpg',
-        	'title'=>'Краситель сухой Food Colours 045 Фиолетовый 8',
-        	'description'=>'Краситель сухой Food Colours 045 Фиолетовый 8',
+            'id'=>'47',
+        	'imagePath'=> 'p4.jpg',
+        	'title'=>'Кекс',
+        	'description'=>'Кекс',
+            'weight'=> '3 кг',
+            'pulldate'=>'3 дня',
         	'price'=>12,
-            'brand_id'=>3
+            'brand_id'=>5
         ]);
         $product->save();
 
         $product = new \App\Product([
-            'imagePath'=> 'img/p3.jpg',
-            'title'=>'Краситель сухой Food Colours 045 Фиолетовый 8',
-            'description'=>'Краситель сухой Food Colours 045 Фиолетовый 8',
+            'id'=>'48',
+            'imagePath'=> 'p3.jpg',
+            'title'=>'Сухарики',
+            'description'=>'Сухарики',
+            'weight'=> '3 кг',
+            'pulldate'=>'3 дня',
             'price'=>18,
             'brand_id'=>5
         ]);
         $product->save();
 
         $product = new \App\Product([
-        	'imagePath'=> 'img/p3.jpg',
-        	'title'=>'Краситель сухой Food Colours 045 Фиолетовый 8',
-        	'description'=>'Краситель сухой Food Colours 045 Фиолетовый 8',
+            'id'=>'49',
+        	'imagePath'=> 'p3.jpg',
+        	'title'=>'Карамель',
+        	'description'=>'Карамель',
+            'weight'=> '3 кг',
+            'pulldate'=>'3 дня',
         	'price'=>18,
             'brand_id'=>6
         ]);

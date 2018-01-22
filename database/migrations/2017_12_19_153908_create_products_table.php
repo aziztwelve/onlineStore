@@ -18,6 +18,8 @@ class CreateProductsTable extends Migration
             $table->string('imagePath');
             $table->string('title', 45);
             $table->text('description');
+            $table->string('weight')->nullable();
+            $table->string('pull-date')->nullable();
             $table->integer('price');
             $table->integer('brand_id');
             $table->timestamps();

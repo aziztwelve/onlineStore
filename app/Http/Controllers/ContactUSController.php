@@ -31,7 +31,11 @@ class ContactUSController extends Controller
         'message' => 'required'
         ]);
  
-       ContactUS::create($request->all());
+       ContactUS::create([
+        'name'=>$request->get('name'),
+        'email'=>$request->get('email'),
+        'message'=>$request->get('message')
+       ]);
 
 
 

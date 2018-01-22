@@ -12,49 +12,29 @@ class BrandTableSeeder extends Seeder
     public function run()
     {
          $brand = new \App\Brand([
-        	'imagePath'=> 'img/p1.jpg',
-        	'name'=>'Краситель',
+        	'imagePath'=> 'p1.jpg',
+        	'name'=>'Конти',
         	
         ]);
         $brand->save();
         $brand = new \App\Brand([
-        	'imagePath'=> 'img/p1.jpg',
-        	'name'=>'Краситель',
+        	'imagePath'=> 'p1.jpg',
+        	'name'=>'Атаг',
         ]);
         $brand->save();
         $brand = new \App\Brand([
-        	'imagePath'=> 'img/p1.jpg',
-        	'name'=>'Краситель',
+        	'imagePath'=> 'p1.jpg',
+        	'name'=>'Киндер',
         ]);
         $brand->save();
         $brand = new \App\Brand([
-        	'imagePath'=> 'img/p1.jpg',
-        	'name'=>'Краситель',
+        	'imagePath'=> 'p1.jpg',
+        	'name'=>'Каролина',
         ]);
         $brand->save();
         $brand = new \App\Brand([
-        	'imagePath'=> 'img/p1.jpg',
-        	'name'=>'Краситель',
-        ]);
-        $brand->save();
-        $brand = new \App\Brand([
-        	'imagePath'=> 'img/p1.jpg',
-        	'name'=>'Краситель',
-        ]);
-        $brand->save();
-        $brand = new \App\Brand([
-        	'imagePath'=> 'img/p1.jpg',
-        	'name'=>'Краситель',
-        ]);
-        $brand->save();
-        $brand = new \App\Brand([
-        	'imagePath'=> 'img/p1.jpg',
-        	'name'=>'Краситель',
-        ]);
-        $brand->save();
-        $brand = new \App\Brand([
-        	'imagePath'=> 'img/p1.jpg',
-        	'name'=>'Краситель',
+        	'imagePath'=> 'p1.jpg',
+        	'name'=>'Интелс',
         ]);
         $brand->save();
 

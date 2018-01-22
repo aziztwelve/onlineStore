@@ -4,23 +4,25 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
-<div style="background-color: rgba(0, 0, 0, 0.01);" class="container">
+<div  class="container">
+
+
     
-    <div style="float: right;margin-right: 50px;">
+    <div style="float: right;margin-right: 50px; ">
         
         <div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m20!1m8!1m3!1d1998.9425234021676!2d30.3610854!3d59.9330959!3m2!1i1024!2i768!4f13.1!4m9!3e2!4m3!3m2!1d59.9347049!2d30.3602527!4m3!3m2!1d59.933045699999994!2d30.3601335!5e0!3m2!1sru!2sru!4v1512522151409" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe></div>
     </div>
-    <div class="col-md-5">
+    <div class="col-md-5" style="background-color: rgba(0, 0, 0, 0.01);">
         <div class="form" style="margin-top: 30px;>
             {{-- <form style="margin-top: 10px;"> --}}
                 <div class="row d-flex justify-content-center">
                     <h3 class="white-text mb-0 py-5 font-bold" style="margin-left: 100px;" ><span>ОБРАТНАЯ СВЯЗЬ</span></h3>
                 </div>
-                @if(Session::has('success'))
+                {{-- @if(Session::has('success'))
                 <div class="alert alert-success">
                     {{ Session::get('success') }}
                 </div>
-                @endif
+                @endif --}}
                 
                 {!! Form::open(['route'=>'contactus.store']) !!}
                 <div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
@@ -46,6 +48,10 @@
                 
             {!! Form::close() !!}
         </div>
+
+
+
+
     </div>
 </div>
 <script>
