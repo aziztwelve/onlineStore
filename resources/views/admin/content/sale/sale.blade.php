@@ -64,6 +64,7 @@
 				 
 				<td>{!! $v['brand']['name']!!}</td>
 				<td>
+					{{ csrf_field() }}
 				{!! Form::open(['url'=>route('edit_sale_product',['v'=> $v->id]), 'class'=>'form-horizontal', 'method'=>'POST']) !!}
 
 				{{ method_field('DELETE')}}

@@ -69,8 +69,12 @@ class AddController extends Controller
     		if ($request->hasFile('imagePath')) {
     			$image = $request->file('imagePath');
     			$filename = time() . '.' . $image->getClientOriginalExtension();
-    			$location = public_path('images/'.$filename);
+    			$location = 'images/'.$filename;
     			Image::make($image)->resize(934, 623)->save($location);
+
+                // if (!file_exists($save_path)) {
+                //     mkdir($save_path, 666, true);
+                // }
 
     			$product_add->imagePath = $filename;
     		}

@@ -21,7 +21,7 @@
 			{!! Form::file('imagePath', ['class'=>'filestyle', 'data-buttonText'=>'Выберите изображение', 'data-buttonName'=>'btn-primary',  'data-placeholder'=>'Файла нет']) !!}
 		</div>
 	</div>
-
+{{ csrf_field() }}
 
 	<div class="form-group">
 		<div class="col-xs-offset-2 col-xs-10">

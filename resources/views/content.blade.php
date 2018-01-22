@@ -2,7 +2,7 @@
 @section('content')
     <div class="inner group" style="float:left; width: 100%; margin-left: 30px;">
        
-
+{{ csrf_field() }}
 
         <div class="index-tabs">
             <a href="{{ route('hit') }}">Хит</a>

@@ -72,9 +72,9 @@ Route::get('/order', [
 	'as'=>'order'
 ]);
 
-Route::post('/order', [
+Route::post('/ordera', [
 	'uses'=>'OrderController@postOrder',
-	'as'=>'order'
+	'as'=>'del_order'
 ]);
 
 Route::post('/order', [

@@ -53,15 +53,6 @@ class OrderController extends Controller
         // dd($order);
 
         $order->save();
-
-
-     //    $product = Product::all();
-    	// return view('order.order', ['products'=>$cart->items, 'totalPrice'=>$cart->totalPrice, 
-     //        'product'=>$product]);
-
-
-
-
         Session::forget('cart');
         return redirect()->route('content')->with('success', 'Заказ оформлен. Спасибо за покупку!');
     }

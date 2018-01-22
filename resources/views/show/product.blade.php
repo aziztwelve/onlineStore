@@ -3,6 +3,7 @@
 
 @section('content')
 <div class="container" >
+	{{ csrf_field() }}
 	<h1>{{ $product->title }}</h1>
 	<div class="catalog-element">
 		<div width="0%" valign="top" class="catalog-element-photos lightbox">
@@ -66,7 +67,7 @@ padding-bottom: 1em;
 
 			<div class="big-image" style="float: left; width: 250px; height: auto; margin-top:30px;">
 				
-				<div class="align-center"><img style="border-style: solid 2px;" itemprop="image" src="{{ URL::to('/') }}/{{ $product->imagePath }}" alt="Торт «Безе с клюквой и шоколадом»" title="Торт «Безе с клюквой и шоколадом»" width="450" height="375"></div>
+				<div class="align-center"><img style="border-style: solid 2px;" itemprop="image" src="{{ URL::to('/images') }}/{{ $product->imagePath }}" alt="Торт «Безе с клюквой и шоколадом»" title="Торт «Безе с клюквой и шоколадом»" width="450" height="375"></div>
 			</div>
 		</div>
 	</div>

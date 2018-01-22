@@ -55,7 +55,8 @@
 {{-- ==============================Доставка=============================================== --}}
 <div class="container frame"  id="delivery_block" style="display: none;">
   <div class=" unvisible" {{-- id="delivery_block" style="display: block;" --}}>
-    <form action="{{ route('order') }}" method="post" name="cake_order_delivery">
+    <form action="{{ route('del_order') }}" method="post" name="cake_order_delivery">
+      {{ csrf_field() }}
       <h2 style="text-align: center;">Доставка</h2>
       <table class="table-border">
         <tbody>
@@ -133,7 +134,7 @@
 <div class="container frame" id="self_block" style="display: none;">
   <div class=" unvisible " {{-- id="self_block" style="display: block;" --}}>
     <form action="{{ route('self_order') }}" method="post" name="cake_order_self">
-      
+      {{ csrf_field() }}
       <h2 style="text-align: center;">Самовывоз</h2>
       <table class="table-border">
         <tbody>

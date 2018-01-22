@@ -42,7 +42,8 @@ class AddController extends Controller
     		if ($request->hasFile('imagePath')) {
     			$image = $request->file('imagePath');
     			$filename = time() . '.' . $image->getClientOriginalExtension();
-    			$location = public_path('images/brand/'.$filename);
+    			$location = 'images/brand/'.$filename;
+                
     			Image::make($image)->resize(800, 400)->save($location);
 
     			$brand_add->imagePath = $filename;

@@ -2,6 +2,7 @@
 @section('content')
 
 @foreach($brand->products->chunk(4) as $productChunk)
+{{ csrf_field() }}
         <div class="row" style="margin-left: 30px;">
             @foreach($productChunk as $product)
             <div class="card classcard">

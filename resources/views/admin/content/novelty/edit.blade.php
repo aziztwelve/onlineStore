@@ -118,6 +118,7 @@
 			{!! Form::textarea('content_text', $data['content_text'], ['id'=>'editor', 'class'=>'form-control']) !!}
 		</div>
 	</div> --}}
+	{{ csrf_field() }}
 
 	<div class="form-group">
 		<div class="col-xs-offset-2 col-xs-10">

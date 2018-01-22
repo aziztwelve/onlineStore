@@ -89,7 +89,7 @@ class NoveltyController extends Controller
             if ($request->hasFile('imagePath')) {
                 $image = $request->file('imagePath');
                 $filename = time() . '.' . $image->getClientOriginalExtension();
-                $location = public_path('images/'.$filename);
+                $location = 'images/'.$filename;
                 Image::make($image)->resize(934, 623)->save($location);
 
                 $product_add->imagePath = $filename;

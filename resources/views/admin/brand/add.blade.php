@@ -22,7 +22,7 @@
 		</div>
 	</div>
 
-
+{{ csrf_field() }}
 	<div class="form-group">
 		<div class="col-xs-offset-2 col-xs-10">
 			{!! Form::button('Сохранить', ['class'=>'btn btn-primary', 'type'=>'submit']) !!}

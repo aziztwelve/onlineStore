@@ -19,3 +19,4 @@ class OrdersController extends Controller
     	return view('admin.orders.orders', ['orders'=>$orders]);
     }
 }
+ 

@@ -4,6 +4,7 @@
 <div class="row"  >
 	<div style="margin-left: 70px; " class="col-sm-8.5 col-md-8.5 col-md-offset-3 col-sm-offset-3">
 		<ul class="list-group">
+			{{ csrf_field() }}
 			@foreach($products as $product)
 			
 			<li class="list-group-item" style="margin-bottom: 20px;">
@@ -44,7 +45,8 @@
 <hr>
 <div class="row">
 	<div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
-		<a href="{{ route('order') }}">
+		<a href="{{ route('orderGet') }}">
+			{{ csrf_field() }}
 		<button type="button" class="btn btn-success">ОФОРМИТЬ ЗАКАЗ</button>
 		</a>
 	</div>
